@@ -1,0 +1,48 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+
+void printStar() {
+    printf("      ★      \n");
+    printf("    ★ ★ ★    \n");
+    printf("  ★ ★ ★ ★ ★  \n");
+    printf("★ ★ ★ ★ ★ ★ ★\n");
+}
+
+void printMessage(const char* msg) {
+    printf("================================\n");
+    printf("%s\n", msg);
+    printf("================================\n");
+}
+
+int main() {
+    system("clear");
+    
+    printf("\n\n親愛的朋友：\n\n");
+    
+    for(int i = 0; i < 3; i++) {
+        printf("Loading special message");
+        for(int j = 0; j < 3; j++) {
+            printf(".");
+            fflush(stdout);
+            usleep(300000);
+        }
+        printf("\r                        \r");
+    }
+    
+    printf("\n\n");
+    printMessage("     ✧ 祝你生日快樂！✧");
+    printStar();
+    printf("\n");
+    
+    printf("    願你在新的一年：\n\n");
+    printf("    ⭐ 考試順利，金榜題名\n");
+    printf("    ⭐ 讀書進度永遠超前\n");
+    printf("    ⭐ 複習考都考高分\n");
+    printf("    ⭐ 天天元氣滿滿\n");
+    printf("    ⭐ 夢想成真！\n\n");
+    
+    printMessage("     一起加油！一定會成功 ^_^");
+    
+    return 0;
+}
